@@ -65,8 +65,8 @@ $products = [
 
                 <div class="form__title">Checkout</div>
                 <div class="form__field">
-                    <label for="user_name">Username</label>
-                    <input id="user_name" type="text" name="user_name">
+                    <label for="username">Username</label>
+                    <input id="username" type="text" name="username">
                 </div>
                 <div class="form__field">
                     <label for="email">Email</label>
@@ -113,7 +113,7 @@ $products = [
             
             user = tgApi.user();
 
-            //$('#user_name').val(user.first_name + ' ' + user.last_name);
+            //$('#username').val(user.first_name + ' ' + user.last_name);
 
             const name = $(this).attr('data-product-name');
             const price = $(this).attr('data-product-price');
@@ -128,7 +128,7 @@ $products = [
         $('[data-checkout-buy]').on('click', function () {
 
             const data = {
-                user_name: $('[name="user_name"]').val(),
+                username: $('[name="username"]').val(),
                 email: $('[name="email"]').val(),
                 phone: $('[name="phone"]').val(),
                 currency: $('[name="currency"]').val(),
