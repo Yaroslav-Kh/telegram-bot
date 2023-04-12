@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+
+  app:
+    container_name: telegram_bot_local_backend
+    image: telegram_bot_local_backend_image
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    volumes:
+      - ./src:/var/www/html
+    ports:
+      - 8101:80
